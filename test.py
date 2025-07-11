@@ -44,7 +44,7 @@ def extract_reservation_data(df):
             current_reservation['Last Name'] = parts[1] if len(parts) > 1 else ''
 
         # Email
-        elif pd.notna(row[5]) and 'E-mail :' in str(row[5]):
+        elif 'E-mail :' in cell_0:
             current_reservation['Email'] = str(row[7]).strip() if pd.notna(row[7]) else ''
 
         # Teléfono
